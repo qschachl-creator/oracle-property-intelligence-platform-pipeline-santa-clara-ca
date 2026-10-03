@@ -1,0 +1,18 @@
+{
+  "county": "santa-clara",
+  "exportedAt": "2026-10-02T17:35:00Z",
+  "supersedes": "bafkreibxxn7dfrokytikl4oydjcs3nncpqvki5ed2zszsinqoo4zskyej4",
+  "datasets": [
+    {
+      "county": "santa-clara",
+      "source": "gis-parcels",
+      "ingested_count": 494841,
+      "expected_count": 494841,
+      "first_loaded_at": "2026-10-02T08:28:51.749Z",
+      "last_loaded_at": "2026-10-02T08:28:51.749Z",
+      "query_table_cid": "bafybeichaw6qx2hk5arq2wthb7yddfscawlhlbk3nmsflufjddiduwj6li",
+      "ipns_label": null,
+      "note": "Fills the query-table CID left null in the previous coverage record. The county archive CID is unchanged."
+    }
+  ]
+}

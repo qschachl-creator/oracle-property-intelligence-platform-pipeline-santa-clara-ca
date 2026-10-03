@@ -1,0 +1,254 @@
+county: Santa Clara
+state: CA
+slug: santa-clara
+fips: "06085"
+snapshot_time: "2026-09-29T22:00:00Z"
+job_id: santa-clara-onboard-2026-09-29
+required_history_boundary: unproven
+scope: all-16-jurisdictions
+ingest_plan: pilot-25-then-full
+notes: Public-data candidate run. Paid Assessor AMF is out of scope. GIS parcels are the seed backbone under an approved parcel exception, not complete assessed coverage. No adapters. No Filebase. Local Query DB destination proven without seed.
+
+parcel:
+  canonical_source: gis
+  assessed_parcel_count:
+  assessed_count_basis: not-acquired-public-data-scope
+  last_published_amf_approx_from_public_order_form: 458000
+  gis_feature_count: 504717
+  gis_source_url: https://data.sccgov.org/Government/Parcels/ubcd-cewv
+  gis_dataset: ubcd-cewv
+  gis_as_of: FY2026
+  discrepancy_threshold_pct: 2.0
+  discrepancy_explanation: Public GIS feature count is 504717 (Socrata count on ubcd-cewv). The paid Secured Assessment Roll was never acquired. The Assessor's public 2021 order form described that AMF as about 458000 records, a 10.2 percent gap versus GIS if that literature size were treated as assessed. GIS is land-plus-condo polygons and the county states it is inconsistent with official records.
+  separately_assessed_without_geometry: acknowledged
+  identifier_proven: true
+  identifier_name: APN
+  identifier_format: "######## or ###-##-###"
+  identifier_proof_method: operator-manual-assessor-real-property-search
+  identifier_proof_date: "2026-09-29"
+  identifier_proof_input_form: undashed-8-digit
+  identifier_proof_display_form: dashed-3-2-3
+  identifier_proof_n: 5
+  join_rule: Preserve GIS APN as undashed 8-digit text; Assessor search accepts that form and displays dashed 3-2-3; do not digits-only-key; do not fabricate missing geometry
+  appraisal_url: https://www.sccassessor.org/apps/realpropertysearch.aspx?cob=true
+  appraisal_access_method: cloudflare-blocked-in-this-environment
+  bulk_roll_order_page: https://www.sccassessor.org/about-us/purchase-data/bulk-data
+  bulk_roll_contact: Standards and Services Division 408-299-5500
+  bulk_roll_mf901b_fee_usd: 495
+  bulk_roll_mf901_fee_usd: 2485
+  bulk_roll_acquisition_status: out-of-scope-public-data-only
+  seed_source_for_this_run: gis
+  seed_claims_complete_assessed_coverage: false
+
+permits:
+  expected_jurisdiction_count: 16
+  assumes_unified_countywide_history: false
+  adapter_implementation: not-started
+  jurisdictions:
+    - jurisdiction: unincorporated
+      status: supported
+      vendor: accela
+      url: https://aca-prod.accela.com/sccgov/Default.aspx
+      search_url: https://aca-prod.accela.com/SCCGOV/Cap/CapHome.aspx?module=Development&TabName=Development
+      agency: sccgov
+      portal_kind: application-intake
+      historical_records: false
+      search: parcel-and-address-without-login
+      probe: live-2026-09-29-cap-home-development
+      implementation_status: not-started
+    - jurisdiction: Campbell
+      status: supported
+      vendor: mygovernmentonline
+      url: https://www.mygovernmentonline.org/
+      portal_kind: application-intake
+      historical_records: false
+      search: permit-status-via-mgo
+      probe: official-city-page-2026-09-29
+      implementation_status: not-started
+    - jurisdiction: Cupertino
+      status: supported
+      vendor: accela
+      url: https://aca-prod.accela.com/CUPERTINO/Cap/CapHome.aspx?TabName=Home&module=Building
+      portal_kind: record-search
+      historical_records: true
+      search: address-parcel-record
+      probe: accela-search-page-indexed
+      implementation_status: not-started
+    - jurisdiction: Gilroy
+      status: supported
+      vendor: tyler-energov
+      url: https://gilroyca-energovweb.tylerhost.net/apps/SelfService#/home
+      portal_kind: application-intake
+      historical_records: false
+      search: account-self-service
+      probe: tyler-selfservice-reachable
+      implementation_status: not-started
+    - jurisdiction: Los Altos
+      status: supported
+      vendor: centralsquare-etrakit
+      url: https://trakit.losaltosca.gov/etrakit/
+      portal_kind: record-search
+      historical_records: true
+      search: search-permit
+      probe: official-etrakit-home
+      implementation_status: not-started
+    - jurisdiction: Los Altos Hills
+      status: supported
+      vendor: centralsquare-etrakit
+      url: https://trakit.losaltoshills.ca.gov/etrakit/Search/permit.aspx
+      portal_kind: record-search
+      historical_records: true
+      search: permit-address-apn
+      probe: etrakit-permit-search-page
+      implementation_status: not-started
+    - jurisdiction: Los Gatos
+      status: supported
+      vendor: accela
+      url: https://aca-prod.accela.com/TLG/Cap/CapHome.aspx?TabName=Building&module=Building
+      portal_kind: record-search
+      historical_records: true
+      search: parcel-undashed
+      probe: accela-search-page-indexed
+      implementation_status: not-started
+    - jurisdiction: Milpitas
+      status: supported
+      vendor: centralsquare-etrakit
+      url: https://trakit.ci.milpitas.ca.gov/ETRAKIT3/Search/permit.aspx
+      portal_kind: record-search
+      historical_records: true
+      search: permit-number-or-address
+      probe: etrakit-permit-search-page
+      implementation_status: not-started
+    - jurisdiction: Monte Sereno
+      status: supported
+      vendor: custom-epermits
+      url: https://epermits.montesereno.org/
+      portal_kind: application-intake
+      historical_records: false
+      search: unproven
+      probe: epermits-home-indexed
+      implementation_status: not-started
+    - jurisdiction: Morgan Hill
+      status: supported
+      vendor: centralsquare-etrakit
+      url: https://morg-trk.aspgov.com/etrakit/Search/permit.aspx
+      portal_kind: record-search
+      historical_records: true
+      search: permit-search
+      probe: etrakit-permit-search-page
+      implementation_status: not-started
+    - jurisdiction: Mountain View
+      status: supported
+      vendor: custom-epermits
+      url: https://epermits.mountainview.gov/h.aspx
+      portal_kind: record-search
+      historical_records: false
+      search: address-or-apn
+      probe: epermits-search-form-fetched
+      implementation_status: not-started
+    - jurisdiction: Palo Alto
+      status: supported
+      vendor: palo-alto-permit-view
+      url: https://www.paloalto.gov/Departments/Planning-Development-Services/Development-Services/Palo-Alto-Permit-View
+      portal_kind: record-search
+      historical_records: true
+      search: address-date-type-apn
+      probe: city-page-and-legacy-accela-indexed
+      implementation_status: not-started
+    - jurisdiction: San Jose
+      status: supported
+      vendor: custom-sjpermits
+      url: https://sjpermits.org/permits/online-permits.html
+      portal_kind: record-search
+      historical_records: true
+      search: permits-property-zoning
+      probe: official-page-indexed
+      structured_source: https://geo.sanjoseca.gov/server/rest/services/PLN/PLN_PermitsAndComplaints/MapServer
+      structured_layers: [7, 8, 9]
+      adapter_key: arcgis-feature-service
+      assignment_vendor_module: counties/santa-clara/permits/sanjose-arcgis.mjs
+      runtime_registered: false
+      permit_feed: not-started
+      implementation_status: vendor-module-proof-assignment-repo
+    - jurisdiction: Santa Clara
+      status: supported
+      vendor: accela
+      url: https://aca-prod.accela.com/SANTACLARA/Cap/CapHome.aspx?module=Building
+      portal_kind: record-search
+      historical_records: true
+      search: parcel-dashed
+      probe: accela-search-page-indexed
+      implementation_status: not-started
+    - jurisdiction: Saratoga
+      status: supported
+      vendor: centralsquare-etrakit
+      url: https://sara.csqrcloud.com/community-etrakit/
+      portal_kind: application-intake
+      historical_records: false
+      search: account-dashboard
+      probe: official-city-page
+      implementation_status: not-started
+    - jurisdiction: Sunnyvale
+      status: supported
+      vendor: iworq
+      url: https://sunnyvalepermits.portal.iworq.net/portalhome/sunnyvalepermits
+      portal_kind: application-intake
+      historical_records: false
+      search: split-before-after-2024-10-07
+      probe: iworq-portal-indexed
+      implementation_status: not-started
+
+identity:
+  corporate_registry: california-sos-bizfile
+  corporate_registry_url: https://bizfileonline.sos.ca.gov/
+  corporate_registry_status: unresolved
+  sos_production_business_entity_api: government-agencies-only
+  sos_api_key_viable: false
+  sos_unattended_blocker: bizfile-incapsula-and-bulk-account
+  do_not_bypass_incapsula: true
+  do_not_buy_data: true
+  licensing_authority: cslb
+  licensing_url: https://www.cslb.ca.gov/
+  cslb_public_data_portal: https://www.cslb.ca.gov/Onlineservices/DataPortal/
+  cslb_list_by_county: https://www2.cslb.ca.gov/onlineservices/dataportal/ListByCounty
+  cslb_contractor_list: https://www.cslb.ca.gov/Onlineservices/DataPortal/ContractorList
+  cslb_pilot: santa-clara-c39-private-baseline
+  cslb_lexicon_emit: false
+  permit_page_names: search-keys-only
+  florida_sunbiz_dbpr: not-applicable
+  bundled_skill_status: missing-ca-equivalents
+
+destination:
+  writes_in_scope: true
+  proven: true
+  execution_mode: local-elephant-county
+  environment: non-production
+  independent_identity_sources:
+    - postgres_cluster_data_directory_and_system_identifier
+    - runtime_env_host_port_database_user
+  postgres_version: "16.15"
+  cluster_system_identifier: "7691080307121495675"
+  configured_host: 127.0.0.1
+  configured_port: 5432
+  configured_database: elephant
+  configured_user: postgres
+  docker: not-used
+  seed_required_for_proof: false
+
+publication:
+  in_scope: true
+  registry: atlas
+  county_page: counties/CA/santa-clara.json
+  upload_node: unconfirmed
+  atlas_pr_access: unconfirmed
+  credentials_in_repo: forbidden
+
+enrichment:
+  bbb:
+    in_scope: true
+    advertised_listing_count:
+    expected_count:
+
+approved_exceptions:
+  - gate: parcel
+    reason: Candidate assignment is public-data only, so the paid Santa Clara Assessor Secured Master File (AMF/MF901/MF901B) is out of scope and was not purchased. No current official assessed-parcel denominator is in hand. Public GIS layer ubcd-cewv has 504717 features. The Assessor public order form (2021) described the paid AMF as about 458000 records (about 10.2 percent below GIS if used as literature only). GIS is the seed backbone for this run only, not a claim of complete assessed-property coverage. GIS may extra-count air/condo polygons and omit or distort separately assessed units, right-of-way, or unofficial-record mismatches; coverage is GIS-feature coverage as of FY2026, not roll completeness. Provenance: keep source APN as text, dataset URL, retrieve timestamp, and native geometry; never invent coordinates or digits-only keys.

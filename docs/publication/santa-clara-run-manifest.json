@@ -1,0 +1,197 @@
+{
+  "county": "santa-clara",
+  "state": "CA",
+  "fips": "06085",
+  "runId": "santa-clara-public-gis-2026-10-02",
+  "publishedAt": "2026-10-02T17:35:00Z",
+  "ipns": null,
+  "ipnsNote": "No candidate IPNS name was published. The Atlas IPNS name is updated only when an Atlas code owner merges counties/CA/santa-clara.json.",
+  "countyArchive": {
+    "cid": "baguqeerao6gqmxdj3okmblnkaigaopef56zxc7oedoo2jpq36wvc7h4eurwq",
+    "name": "santa-clara county archive root",
+    "codec": "dag-json",
+    "size": 6996,
+    "sha256": "778d065c69db94c0adaa020c073c85efb3717dc41b9da4be1bf5aa2f9f84a46d",
+    "properties": 494841,
+    "shards": 99,
+    "importedBlockCount": 5938192,
+    "importedBlockBytes": 2650425929,
+    "carContainer": {
+      "name": "data/runs/santa-clara-full/santa-clara-county.car",
+      "size": 2882015646,
+      "sha256": "f84ca57e6025288668734081918554cfc47bb56cd84598ce7e0f3630b4d213f5",
+      "note": "Local import package. The durable CID is the archive root above, not a CID of this .car file."
+    }
+  },
+  "incrementalExample": {
+    "note": "The county archive CID was not mutated. A later coverage record replaced a null query-table CID and received a new CID. The previous coverage CID still resolves.",
+    "previous": {
+      "cid": "bafkreibxxn7dfrokytikl4oydjcs3nncpqvki5ed2zszsinqoo4zskyej4",
+      "name": "dataset-coverage.json",
+      "codec": "file",
+      "size": 380,
+      "sha256": "37bb7e32c5cac4d0a5f1d81a452db5a27c2aa47483d6659921b073b9992b044f"
+    },
+    "next": {
+      "cid": "bafkreih3u453drytx7c6hwbiqainuaaecjyd5n7iozc7rcigayhncjbec4",
+      "name": "dataset-coverage-v2.json",
+      "codec": "file",
+      "size": 649,
+      "sha256": "fba73bb1c713bfc5e3d8288010da000412703eb7e87645f88906060ed1242417"
+    }
+  },
+  "artifacts": [
+    {
+      "cid": "baguqeerao6gqmxdj3okmblnkaigaopef56zxc7oedoo2jpq36wvc7h4eurwq",
+      "name": "county-archive-root",
+      "codec": "dag-json",
+      "size": 6996,
+      "sha256": "778d065c69db94c0adaa020c073c85efb3717dc41b9da4be1bf5aa2f9f84a46d"
+    },
+    {
+      "cid": "baguqeerahibkqr4glwsjhnivm5vqep22qj5kn7mogguxjrgoqcdevgsfyora",
+      "name": "tables-root",
+      "codec": "dag-json",
+      "size": 1805,
+      "sha256": "3a02a847865da493b515676b023f5a827aa6fd8e31a974c4ce80864a9a45c3a2"
+    },
+    {
+      "cid": "bafybeichaw6qx2hk5arq2wthb7yddfscawlhlbk3nmsflufjddiduwj6li",
+      "name": "query-table.parquet",
+      "codec": "file",
+      "size": 147944514,
+      "sha256": "dac4d6a990973937bc59d858a382bc44aea6007ed89c4b1f17a60bb46cbc3974",
+      "rows": 494841
+    },
+    {
+      "cid": "bafybeiflbfzalvahkotoxk7vdakdzthp7hfdnpwauj4hdb6qjo7tx7puyi",
+      "name": "roof-age.parquet",
+      "codec": "file",
+      "size": 339282,
+      "sha256": "22146d46c6a1fd46c19cd2fb6aff4de9f135cdc32d1b2be6685d843101b2acfb",
+      "rows": 6955
+    },
+    {
+      "cid": "bafybeiejbzvkke5sygftcxqj75e6peh4e44xblrfzvxa7cm53xlyi4c5ve",
+      "name": "san-jose-reroof-roof-age.json",
+      "codec": "file",
+      "size": 2342669,
+      "sha256": "a4f4ded4ecf9c0ca2a91c961296d962f60917bd9ea09916386fb7258c7f2e05b"
+    },
+    {
+      "cid": "bafybeihfwmr3gbjtymcy2qo7vjgbix7zsmd7ugcb7asiw5gf2pqwwtxgiy",
+      "name": "tables/address/part-00000.parquet",
+      "codec": "file",
+      "size": 33921556,
+      "sha256": "7c940ad69c849a188832e68da71c29f5a7807d18185c8624efe2777eed1d5c33"
+    },
+    {
+      "cid": "bafybeiayoxwbiov2622stx3famfv2vr2uy5cm7oo57vvn5aoxtxnfglnua",
+      "name": "tables/address_has_parcel/part-00000.parquet",
+      "codec": "file",
+      "size": 66657199,
+      "sha256": "e37109b4ee463c45dd17331068feff4245c46053fd4a9bc13d3ec7e4c1f99fe4"
+    },
+    {
+      "cid": "bafybeifd66fmaz7huy2htjqbqfnbefxdapx3bdcreayp6ejpmgkk3ev4zq",
+      "name": "tables/geometry/part-00000.parquet",
+      "codec": "file",
+      "size": 81298050,
+      "sha256": "d1662f5e5e29c04e8abed31de934a6962c65d9ab6a8cde75d7879221972b62fd"
+    },
+    {
+      "cid": "bafybeifv5snu3n7axn5bmjhfqbdnl6b5o6tztltbuuwvhk3scvowklyrby",
+      "name": "tables/lot/part-00000.parquet",
+      "codec": "file",
+      "size": 34032486,
+      "sha256": "4a99062def5707427fe4e2b8b5fb332acc34a16d397c845b3fd47f76ccb95f4b"
+    },
+    {
+      "cid": "bafybeigy2hb2c4c47hvsspug26atz3kopspbgft3b37ltex3sq35jydbqy",
+      "name": "tables/parcel/part-00000.parquet",
+      "codec": "file",
+      "size": 34541539,
+      "sha256": "20a3f35b7bb307a412f131049f13696de9fd7ea62992dce8ecbfded7eb3d41af"
+    },
+    {
+      "cid": "bafybeidij623bauimoxge2pqc4fowf4xxquocibgcj2yvhhlwjzvmrmmfi",
+      "name": "tables/parcel_has_geometry/part-00000.parquet",
+      "codec": "file",
+      "size": 66657937,
+      "sha256": "c721cc24b2f7a1093926b8980ca4ef4f38fde34c74758db6f31a81dd0c36bfd9"
+    },
+    {
+      "cid": "bafybeihifyx5anbrsxvwhffpch4cq55olbnmnueb2bdowckj6eyqgs7kzu",
+      "name": "tables/properties/part-00000.parquet",
+      "codec": "file",
+      "size": 49991632,
+      "sha256": "9faa31eac79514d10d2bfa5b66f3ebf0ebc537462256a2c5c144ec7a3531018f"
+    },
+    {
+      "cid": "bafybeibqgcyprsagfhko6ihar4mbogsmsc6e5lgwzodg3w6szwabqhg4ay",
+      "name": "tables/property/part-00000.parquet",
+      "codec": "file",
+      "size": 34620088,
+      "sha256": "e452a9adbf3be5e7e3dc50dbe84a322e7f21c94d7f035f14baa78e80ddd765da"
+    },
+    {
+      "cid": "bafybeiainttjujri53lpq344lgxeff7coqqenjrl23e2wzfjfkg2oufquq",
+      "name": "tables/property_has_address/part-00000.parquet",
+      "codec": "file",
+      "size": 66657901,
+      "sha256": "b3f33dee388dbe8dcf2f4b4d73d4d55fb675e08aea6352a68792063eb3fb7b2b"
+    },
+    {
+      "cid": "bafybeiagjso7wikeobrjszyzpfcfwycjl5w4ekp3qomk7cyvqhjrkmut2a",
+      "name": "tables/property_has_lot/part-00000.parquet",
+      "codec": "file",
+      "size": 66658934,
+      "sha256": "52d2ff7dc476193efbb20bc7ba53d72636c1c9f2e529a0ae8965c54cac435f5a"
+    },
+    {
+      "cid": "bafybeifeiit37p2m6ixoqlb5xn3e7pjlkg4oy4xrdtrllhso4gj4ijjuru",
+      "name": "tables/property_has_parcel/part-00000.parquet",
+      "codec": "file",
+      "size": 66657394,
+      "sha256": "a153ee5743eb23f4d515354796d4db5a2c010ed1061d6b03d73a37b39ed457c9"
+    },
+    {
+      "cid": "bafkreibxxn7dfrokytikl4oydjcs3nncpqvki5ed2zszsinqoo4zskyej4",
+      "name": "dataset-coverage.json",
+      "codec": "file",
+      "size": 380,
+      "sha256": "37bb7e32c5cac4d0a5f1d81a452db5a27c2aa47483d6659921b073b9992b044f"
+    },
+    {
+      "cid": "bafkreih3u453drytx7c6hwbiqainuaaecjyd5n7iozc7rcigayhncjbec4",
+      "name": "dataset-coverage-v2.json",
+      "codec": "file",
+      "size": 649,
+      "sha256": "fba73bb1c713bfc5e3d8288010da000412703eb7e87645f88906060ed1242417"
+    }
+  ],
+  "independentGatewayChecks": {
+    "checkedAt": "2026-10-02T17:31:24Z",
+    "gateways": [
+      "https://ipfs.filebase.io/ipfs/",
+      "https://gateway.pinata.cloud/ipfs/"
+    ],
+    "matchedSha256": [
+      "baguqeerao6gqmxdj3okmblnkaigaopef56zxc7oedoo2jpq36wvc7h4eurwq",
+      "baguqeerahibkqr4glwsjhnivm5vqep22qj5kn7mogguxjrgoqcdevgsfyora",
+      "bafybeichaw6qx2hk5arq2wthb7yddfscawlhlbk3nmsflufjddiduwj6li",
+      "bafybeiflbfzalvahkotoxk7vdakdzthp7hfdnpwauj4hdb6qjo7tx7puyi",
+      "bafybeiejbzvkke5sygftcxqj75e6peh4e44xblrfzvxa7cm53xlyi4c5ve",
+      "bafkreibxxn7dfrokytikl4oydjcs3nncpqvki5ed2zszsinqoo4zskyej4",
+      "bafkreih3u453drytx7c6hwbiqainuaaecjyd5n7iozc7rcigayhncjbec4"
+    ],
+    "notUsed": {
+      "https://ipfs.io/ipfs/": "HTTP 429 or Cloudflare body 'blocked' from this network on 2026-10-02.",
+      "https://dweb.link/ipfs/": "HTTP 403 and HTTP 429 from this network on 2026-10-02."
+    }
+  },
+  "duckdb": {
+    "roofsOlderThan15Years": "SELECT parcel_identifier, roof_date, roof_age_years, roof_age_permit_id, roof_age_eligibility_reason FROM read_parquet('roof-age.parquet') WHERE olderThan15Years = true ORDER BY parcel_identifier",
+    "expectedApns": ["46204039", "49454036", "56904039", "56934012", "67620085"]
+  }
+}

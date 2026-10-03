@@ -1,0 +1,36 @@
+{
+  "layerId": 8,
+  "layerName": "Active Building Permit",
+  "where": "APN='68958007'",
+  "features": [
+    {
+      "attributes": {
+        "OBJECTID": 12196,
+        "APPLICANT": "NONE",
+        "CONTRACTOR": "WESTSHORE ROOFING INC  Paul Fowler",
+        "FACILITYID": "3137",
+        "INTID": 3137,
+        "ADDRESS": "6429  PELHAM CT  , SAN JOSE CA 95123-4941",
+        "APN": "68958007",
+        "WORKDESC": "ReRoof",
+        "SUBDESC": "Single-Family",
+        "PERMITAPPROVAL": "",
+        "ISSUEDATE": 877478400000,
+        "ISSUEDATEUTC": 877503600000,
+        "FINALDATE": null,
+        "FINALDATEUTC": null,
+        "DWELLINGUNIT": 0,
+        "PERMITVALUE": 0,
+        "SQUAREFOOT": 0,
+        "FOLDERNUM": "1997-068904-RS",
+        "LASTUPDATE": 1679041633000,
+        "LASTEDITOR": "FME",
+        "NOTES": " ",
+        "ENTERPRISEID": "PLN-PBAC-0000003137",
+        "GlobalID": "{2724793D-5B3B-456F-A494-2E3F7B086DBF}"
+      }
+    }
+  ],
+  "count": 1,
+  "exceededTransferLimit": false
+}

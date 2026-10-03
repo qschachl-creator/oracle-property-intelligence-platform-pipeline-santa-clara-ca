@@ -1,0 +1,10 @@
+data/seeds/santa-clara.csv
+data/runs/
+data/captures/
+data/identity/
+tools/node_modules/
+submit_errors.csv
+submit_warnings.csv
+elephant-cli.log
+tools/submit_warnings.csv
+tools/elephant-cli.log

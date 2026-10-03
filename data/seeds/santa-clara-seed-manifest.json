@@ -1,0 +1,85 @@
+{
+  "county": "santa-clara",
+  "coverage_claim": "GIS feature coverage for a public-data candidate run, not complete assessed-roll coverage",
+  "source_dataset_id": "ubcd-cewv",
+  "source_dataset_url": "https://data.sccgov.org/Government/Parcels/ubcd-cewv",
+  "source_retrieved_at": "2026-09-29T22:09:26.133Z",
+  "gis_feature_count_fetched": 504717,
+  "invalid_missing_apn": 9876,
+  "duplicate_nonempty_apn_values": 0,
+  "duplicate_apn_sample": [],
+  "seed_row_count": 494841,
+  "apn_length_histogram": {
+    "8": 494841
+  },
+  "geometry_provenance": "Full MultiPolygon remains in the public GIS dataset. Seed stores objectid as geometry_join_key plus shape_area/shape_length, dataset URL, and retrieve timestamp. APNs are exact GIS text.",
+  "seed_csv": "data/seeds/santa-clara.csv",
+  "seed_csv_sha256": "dcd8d69d9ba78359c227d44b1798cae9eea317d54fa244f4851b6417d09689a3",
+  "seed_csv_bytes": 126585143,
+  "runtime_copy": "skills/use-oracle/runtime/data/seeds/santa-clara.csv",
+  "socrata": {
+    "domain": "data.sccgov.org",
+    "dataset": "ubcd-cewv",
+    "format": "json",
+    "select": [
+      "apn",
+      "objectid",
+      "tax_rate_area",
+      "situs_house_number",
+      "situs_house_number_suffix",
+      "situs_street_direction",
+      "situs_street_name",
+      "situs_street_type",
+      "situs_unit_number",
+      "situs_city_name",
+      "situs_state_code",
+      "situs_zip_code",
+      "number_of_situs_address",
+      "jurisdiction",
+      "shape_length",
+      "shape_area"
+    ],
+    "order": "objectid",
+    "limit": 50000,
+    "paging": "$offset increments of $limit until a short page",
+    "page_url_template": "https://data.sccgov.org/resource/ubcd-cewv.json?$select=apn%2Cobjectid%2Ctax_rate_area%2Csitus_house_number%2Csitus_house_number_suffix%2Csitus_street_direction%2Csitus_street_name%2Csitus_street_type%2Csitus_unit_number%2Csitus_city_name%2Csitus_state_code%2Csitus_zip_code%2Cnumber_of_situs_address%2Cjurisdiction%2Cshape_length%2Cshape_area&$order=objectid&$limit=50000&$offset={offset}",
+    "omitted_fields": ["the_geom"],
+    "omitted_fields_reason": "Full MultiPolygon remains in the GIS dataset; seed joins via objectid"
+  },
+  "sample_parcel_ids": [
+    "09201021",
+    "09241108",
+    "09201020",
+    "09241109",
+    "09241017",
+    "09241107",
+    "09241016",
+    "09241018"
+  ],
+  "runtime_csv_parser": {
+    "parcel_id_header": true,
+    "parsed_rows": 494841,
+    "empty_parcel_id": 0,
+    "duplicate_parcel_id": 0
+  },
+  "appraisal_smoke_samples": [
+    {"parcel_id": "09201021", "jurisdiction": "SAN JOSE"},
+    {"parcel_id": "14810022", "jurisdiction": "PALO ALTO"},
+    {"parcel_id": "09234015", "jurisdiction": "UNINCORPORATED"},
+    {"parcel_id": "10417087", "jurisdiction": "SUNNYVALE"},
+    {"parcel_id": "09206033", "jurisdiction": "MILPITAS"}
+  ],
+  "identifier_verification": {
+    "proven": true,
+    "method": "operator-manual-assessor-real-property-search",
+    "date": "2026-09-29",
+    "input_form": "undashed-8-digit",
+    "results": [
+      {"seed_apn": "09201021", "assessor_display": "092-01-021", "situs": "1902 N CAPITOL AV SAN JOSE", "situs_match": true},
+      {"seed_apn": "14810022", "assessor_display": "148-10-022", "situs": "4386 MILLER CT PALO ALTO", "situs_match": true},
+      {"seed_apn": "09234015", "assessor_display": "092-34-015", "situs": "2048 OLD PIEDMONT RD SAN JOSE", "situs_match": true},
+      {"seed_apn": "10417087", "assessor_display": "104-17-087", "situs": "1386 SANDIA AV SUNNYVALE", "situs_match": true},
+      {"seed_apn": "09206033", "assessor_display": "092-06-033", "situs": "777 N CAPITOL AV MILPITAS", "situs_match": true, "notes": "multiple assessor situs; seed address is one of them"}
+    ]
+  }
+}

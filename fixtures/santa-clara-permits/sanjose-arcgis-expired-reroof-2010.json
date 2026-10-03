@@ -1,0 +1,36 @@
+{
+  "layerId": 9,
+  "layerName": "Expired Building Permit",
+  "where": "APN='67620085' AND FOLDERNUM='2010-012446-RS'",
+  "features": [
+    {
+      "attributes": {
+        "OBJECTID": 51802,
+        "APPLICANT": "ROYAL KNIGHT ROOFING CO INC   ",
+        "CONTRACTOR": "ROYAL KNIGHT ROOFING CO INC   ",
+        "FACILITYID": "45694",
+        "INTID": 45694,
+        "ADDRESS": "3550  KETTMANN RD  , SAN JOSE CA 95121-3201",
+        "APN": "67620085",
+        "WORKDESC": "ReRoof",
+        "SUBDESC": "Single-Family",
+        "PERMITAPPROVAL": "B-Complete",
+        "ISSUEDATE": 1273536000000,
+        "ISSUEDATEUTC": 1273561200000,
+        "FINALDATE": 1275350400000,
+        "FINALDATEUTC": 1275375600000,
+        "DWELLINGUNIT": 0,
+        "PERMITVALUE": 16072,
+        "SQUAREFOOT": 0,
+        "FOLDERNUM": "2010-012446-RS",
+        "LASTUPDATE": 1652260976000,
+        "LASTEDITOR": "FME",
+        "NOTES": " ",
+        "ENTERPRISEID": "PLN-PBEX-0000045694",
+        "GlobalID": "{911EAB22-2E3A-462E-999B-3CEB92BB19CA}"
+      }
+    }
+  ],
+  "count": 1,
+  "exceededTransferLimit": false
+}

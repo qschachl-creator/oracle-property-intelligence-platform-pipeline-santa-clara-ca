@@ -1,0 +1,36 @@
+{
+  "layerId": 7,
+  "layerName": "Recent Building Permit (30 Days)",
+  "where": "APN='09241022'",
+  "features": [
+    {
+      "attributes": {
+        "OBJECTID": 166734,
+        "APPLICANT": "ESCARCEGA,MEL  JAMES ESCARCEGA",
+        "CONTRACTOR": "ESCARCEGA,MEL  JAMES ESCARCEGA",
+        "FACILITYID": "100079",
+        "INTID": 100079,
+        "ADDRESS": "2672  SHADOWVALE WY  , SAN JOSE CA 95132-1042",
+        "APN": "09241022",
+        "WORKDESC": "ReRoof",
+        "SUBDESC": "Single-Family",
+        "PERMITAPPROVAL": "B-Complete",
+        "ISSUEDATE": 1788134400000,
+        "ISSUEDATEUTC": 1788159600000,
+        "FINALDATE": 1789171200000,
+        "FINALDATEUTC": 1789196400000,
+        "DWELLINGUNIT": 0,
+        "PERMITVALUE": 12801,
+        "SQUAREFOOT": 0,
+        "FOLDERNUM": "2026-135571-RS",
+        "LASTUPDATE": 1790241758000,
+        "LASTEDITOR": "FME",
+        "NOTES": null,
+        "ENTERPRISEID": "PLN-PBTH-0000100079",
+        "GlobalID": "{462DAC59-EE41-49EA-A6C1-1DAF749D163F}"
+      }
+    }
+  ],
+  "count": 1,
+  "exceededTransferLimit": false
+}

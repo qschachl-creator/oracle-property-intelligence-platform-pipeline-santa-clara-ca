@@ -1,0 +1,8 @@
+{
+  "name": "santa-clara-elephant-cli-pin",
+  "private": true,
+  "description": "Pin the Elephant CLI that loads https://lexicon.elephant.xyz/api/manifest. Published npm 1.58.1 still fetches a dead HTML json-schemas URL.",
+  "dependencies": {
+    "@elephant-xyz/cli": "github:elephant-xyz/elephant-cli#44bb182b9f7f904662e9b33e1fde70bdeab62322"
+  }
+}
